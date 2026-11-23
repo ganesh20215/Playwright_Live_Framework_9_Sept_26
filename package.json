@@ -13,5 +13,16 @@
   "dependencies": {
     "dotenv": "^18.0.10",
     "playwright": "^1.65.1"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganesh20215/Playwright_Live_Framework_9_Sept_26.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ganesh20215/Playwright_Live_Framework_9_Sept_26/issues"
+  },
+  "homepage": "https://github.com/ganesh20215/Playwright_Live_Framework_9_Sept_26#readme"
 }
