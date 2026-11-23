@@ -9,9 +9,10 @@ test(`Verify login with valid credential - ${loginData.validUser}`, {tag : ['@sm
     await loginPage.setLogin(loginData.validUser.email, loginData.validUser.password);
 })
 
-test(`Verify login with invalid credential - ${loginData.invalidUser}`, async({homePage, loginPage})=>{
+test(`Verify login with invalid credential - ${loginData.invalidUser}`, {tag : ['@smoke']}, async({homePage, loginPage})=>{
     await homePage.acceptCookies();
     await homePage.clickOnUserLogo();
     await loginPage.setLogin(loginData.invalidUser.email, loginData.invalidUser.password);
     expect(await loginPage.loginErrorMessage()).toBe(true);
+
 })
