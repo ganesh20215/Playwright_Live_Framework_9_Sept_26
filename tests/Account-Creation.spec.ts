@@ -1,9 +1,8 @@
 import accountCreation from "../test-data/accountCreation.json";
 import { test } from "../src/fixtures/TestFixture";
-import { expect } from "@playwright/test";
 
 
-test(`Verify account creation with valid data - ${accountCreation.validAccountCreation}`, async({homePage, loginPage, selfRegisterPage})=>{
+test(`Verify account creation with valid data - ${accountCreation.validAccountCreation}`, {tag : ['@smoke']}, async({homePage, loginPage, selfRegisterPage})=>{
     await homePage.acceptCookies();
     await homePage.clickOnUserLogo();
     await loginPage.clickOnCreateAnAccountLink();

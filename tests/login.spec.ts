@@ -3,7 +3,7 @@ import { test } from "../src/fixtures/TestFixture";
 import { expect } from "@playwright/test";
 
 
-test(`Verify login with valid credential - ${loginData.validUser}`, async({homePage, loginPage})=>{
+test(`Verify login with valid credential - ${loginData.validUser}`, {tag : ['@smoke']}, async({homePage, loginPage})=>{
     await homePage.acceptCookies();
     await homePage.clickOnUserLogo();
     await loginPage.setLogin(loginData.validUser.email, loginData.validUser.password);
